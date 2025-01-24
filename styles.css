@@ -1,0 +1,200 @@
+/* Body and General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #121212;
+  color: #fff;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 20%;
+  background: #181818;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar h2 {
+  color: #1db954;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.sidebar li:hover {
+  color: #1db954;
+}
+
+/* Main Content */
+.main-content {
+  width: 80%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background: #333;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar input::placeholder {
+  color: #b3b3b3;
+}
+
+/* Player */
+.player {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 20px;
+  text-align: center;
+  background-color: #181818;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.player::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(15px) brightness(0.5); /* Apply blur and darken effect */
+  z-index: -1;
+  transition: background-image 0.3s ease; /* Smooth transition for changes */
+}
+
+.controls {
+  margin: 10px 0;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.controls button:hover {
+  color: #1db954;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.progress input[type='range'] {
+  width: 80%;
+  cursor: pointer;
+}
+
+/* Playlist Styles */
+.playlist {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #040404;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#song-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#song-list li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#song-list li:hover {
+  background-color: #ddd;
+}
+
+/* Footer Player Styles */
+.footer-player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 1px;
+  height: 40px;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.footer-details {
+  display: ruby;
+  font-size: 10px;
+  align-items: center;
+  margin-right: 20px; /* Add space between song details and controls */
+}
+
+.footer-details img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 11px;
+  margin-right: 12px;
+}
+
+.footer-controls {
+  display: flex;
+  align-items: center; /* Vertically align the controls */
+}
+
+.footer-controls button {
+  padding: 1px;
+  font-size: 2rem;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px; /* Add space between buttons */
+}
+
+.footer-controls button:hover {
+  background-color: #555;
+}

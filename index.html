@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <h2>Spotify</h2>
+      <ul>
+        <li>Home</li>
+        <li>Search</li>
+        <li>Your Library</li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header class="search-bar">
+        <input type="text" placeholder="Search for songs, artists..." id="search-input">
+      </header>
+
+      <section class="player">
+        <img id="album-art" src="album-placeholder.jpg" alt="Album Art">
+        <h2 id="song-title">Song Title</h2>
+        <h3 id="artist-name">Artist Name</h3>
+        <audio id="audio-player" src="song1.mp3"></audio>
+        <div class="controls">
+          <button id="prev">⏮️</button>
+          <button id="play-pause">▶️</button>
+          <button id="next">⏭️</button>
+        </div>
+        <div class="progress">
+          <span id="current-time">0:00</span>
+          <input type="range" id="progress-bar" value="0" min="0" max="100">
+          <span id="total-time">0:00</span>
+        </div>
+      </section>
+
+      <section class="playlist">
+        <h3>Playlist</h3>
+        <ul id="song-list">
+          <!-- Playlist items is dynamically added here -->
+          <li data-src="song1.mp3" data-title="Meherma" data-artist="Darshan Raval">Meherma - Darshan Raval</li>
+          <li data-src="song2.mp3" data-title="Asal Mein" data-artist="Darshan Raval">Asal Mein - Darshan Raval</li>
+          <li data-src="song3.mp3" data-title="Ek Ladki Ko" data-artist="Darshan Raval">Ek Ladki Ko - Darshan Raval</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <!-- Footer Player -->
+  <footer class="footer-player">
+    <div class="footer-details">
+      <img id="footer-album-art" src="album-placeholder.jpg" alt="Album Art">
+      <div>
+        <h4 id="footer-song-title">Song Title</h4>
+        <p id="footer-artist-name">Artist Name</p>
+      </div>
+    </div>
+    <div class="footer-controls">
+      <button id="footer-prev">⏮️</button>
+      <button id="footer-play-pause">▶️</button>
+      <button id="footer-next">⏭️</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
